@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //задание 1
+        'use strict';
+        let Tc = prompt("Введите температуру в градусах Цельсия", 0);
+        let Tf = (9 / 5) * Tc + 32;
+        alert("Температура в градусах по Фаренгейту равна: " + Tf);
+    </script>
+
+    <script>
+        //задание 2
+        'use strict';
+        let admin;
+        let name = "Василий";
+        admin = name;
+        //debugger;
+        console.log(admin);
+    </script>
+
+    <script>
+        //задание 3
+        'use strict';
+        /* 
+        10 + 10 + "10"
+        Оператор сложения имеет ассоциативность "слева направо", поэтому:
+        1. 10+10=20
+        2. 20+"10"="2010"  - тут происходит неяное приведение типа, в строку
+        */
+        let result = 10 + 10 + "10";
+        console.log(result);
+
+        /*
+        10 + "10" + 10
+        1. 10 +"10"="1010"
+        2. "1010" + 10 = "101010" - неяное приведение типа, в строку
+        */
+        result = 10 + "10" + 10;
+        console.log(result);
+
+        /* 
+        10 + 10 + +"10"
+        1.+"10"->10 Т.к. приоритет операции "унарный +" выше приоритета сложения
+        2. 10+10=20
+        3. 20+10=30
+        */
+        result = 10 + 10 + +"10";
+        console.log(result);
+
+        /*
+        10 / -""
+        1.-"" = -0
+        2. 10/-0 = -infinity  
+        */
+        result = 10 / -"";
+        console.log(result);
+
+        /*
+        10 / +"2,5"
+        1. +"2,5" = NaN не удается привести тип к числу, т.к. в JS десятичный знак - "."
+        2. 10/NaN = NaN - один из операндов NaN, след-о результат - также NaN 
+         */
+        result = 10 / +"2,5";
+        console.log(result);
+
+    </script>
+
+</body>
+
+</html>
