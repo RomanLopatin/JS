@@ -12,10 +12,11 @@ function init(postsNumberToLoad) {
     // init.
     if (window.innerHeight === document.body.offsetHeight) {
         insertPosts(postsNumberToLoad);
+        //!!! Про рекурсивный вызов не понял. Без него вроде все работает...или все-таки что-то не так?
     }
 }
 
-let postsNumberToLoad = 3;
+let postsNumberToLoad = 1;
 init(postsNumberToLoad);
 
 document.addEventListener('scroll', function (event) {
