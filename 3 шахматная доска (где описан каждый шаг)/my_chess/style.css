@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+}
+
+.cell{
+    height: 50px;
+    width: 50px;
+    font-size:45px;
+    text-align: center;
+    /* border: 0px solid gray; */
+}
+
+.cell_1 {
+    
+    background: darkgoldenrod; 
+}
+
+.cell_0 {
+    background: rgb(255, 255, 9); 
+}
