@@ -14,9 +14,10 @@ let figure = '';
 for (let i = 1; i <= 9; i++) {
     let line = ``;
     for (let j = 1; j <= 9; j++) {
-        let cell_ind = (i == 9 || j == 9) ? 'sign' : (i + j) % 2;
-        figure = (figures['' + i + j] !== undefined) ? figures['' + i + j] : "";
-        cell = `<td class='cell cell_${cell_ind}'>${figure}</td>`;
+        let cellType = (i == 9 || j == 9) ? 'sign' : (i + j) % 2;
+        let currentPosition = '' + i + j;
+        figure = (currentPosition in figures) ? figures[currentPosition] : "";
+        cell = `<td class='cell cell_${cellType}'>${figure}</td>`;
         line += `${cell}`;
     }
     desk += `<tr class>${line}</tr>`;
